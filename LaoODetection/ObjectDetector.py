@@ -4,10 +4,10 @@ from ultralytics import YOLO
 import cvzone
 
 # Modules inside this package
-from src.LaoODetection.ObjectNames import object_names
-from src.LaoODetection.ObjectTracker import TrackerDetection
-from src.LaoODetection.data_manipulation import *
-from src.LaoODetection.sort import *
+from LaoODetection.ObjectNames import object_names
+from LaoODetection.ObjectTracker import TrackerDetection
+from LaoODetection.data_manipulation import *
+from LaoODetection.sort import *
 
 # Important object:
 tracker = Sort(max_age=20, min_hits=3, iou_threshold=0.18)
@@ -15,9 +15,8 @@ tracker = Sort(max_age=20, min_hits=3, iou_threshold=0.18)
 
 class ObjectDetector:
 
-    def __init__(self, model="yoloV8m.pt", target_object="person"):
-        if model == "yoloV8m.pt" or model == "yoloV8n.pt":
-            self.model = YOLO(f"yoloV8_Models/{model}")
+    def __init__(self, target_object="person"):
+        self.model = YOLO("LaoODetection/yoloV8_Models/yoloV8n.pt")
         self.target_object = target_object
         self.number_of_detected_objects = 0
 

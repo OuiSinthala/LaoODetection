@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ```python
 import cv2 as cv
-from src.LaoODetection import ObjectDetector
+from LaoODetection import ObjectDetector
 
 region_of_interest = cv.imread("RegionOfInterest/roi_people.png")
 
@@ -54,7 +54,7 @@ if __name__ == "__main__":
 
 ```python
 import cv2 as cv
-from src.LaoODetection import ObjectDetector
+from LaoODetection import ObjectDetector
 
 COUNTER_line1 = [80, 400, 700, 400]  # this should be changed to fit your need
 region_of_interest = cv.imread("RegionOfInterest/roi_car.png")

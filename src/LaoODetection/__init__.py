@@ -1,1 +1,0 @@
-from src.LaoODetection.ObjectDetector import ObjectDetector

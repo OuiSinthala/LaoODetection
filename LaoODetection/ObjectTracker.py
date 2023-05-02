@@ -1,6 +1,6 @@
 import cv2 as cv
 import cvzone
-from src.LaoODetection.data_manipulation import creating_detection_line
+from LaoODetection.data_manipulation import creating_detection_line
 
 total_detected_object = []
 
