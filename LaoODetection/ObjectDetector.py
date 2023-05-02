@@ -16,7 +16,7 @@ tracker = Sort(max_age=20, min_hits=3, iou_threshold=0.18)
 class ObjectDetector:
 
     def __init__(self, target_object="person"):
-        self.model = YOLO("LaoODetection/yoloV8_Models/yoloV8n.pt")
+        self.model = YOLO("LaoODetection/yoloV8_Models/yoloV8m.pt")
         self.target_object = target_object
         self.number_of_detected_objects = 0
 
